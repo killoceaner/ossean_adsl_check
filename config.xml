@@ -21,11 +21,16 @@
         <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `cnblogs_news_html_detail`;</sql>
     </site>
 
+    <site>
+        <tablename>cnblog_questions</tablename>
+        <value>24</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `cnblogs_q_unsolved_html_detail`;</sql>
+    </site>
 
     <site>
         <tablename>csdn_blogs</tablename>
         <value>24</value>
-        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `stackoverflow_html_detail`;</sql>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `csdn_blog_html_detail`;</sql>
     </site>
     <site>
         <tablename>stackoverflow_q</tablename>
@@ -35,12 +40,12 @@
     <site>
         <tablename>cnblog_question</tablename>
         <value>24</value>
-        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `stackoverflow_html_detail`;</sql>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `cnblogs_q_unsolved_html_detail`;</sql>
     </site>
     <site>
         <tablename>dewen_question</tablename>
         <value>24</value>
-        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `stackoverflow_html_detail`;</sql>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `dewen_question_html_detail`;</sql>
     </site>
     <site>
         <tablename>iteye_ask</tablename>
@@ -50,6 +55,6 @@
     <site>
         <tablename>csdn_ask</tablename>
         <value>24</value>
-        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `stackoverflow_html_detail`;</sql>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `csdn_ask_html_detail`;</sql>
     </site>
 </sites>

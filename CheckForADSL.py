@@ -89,22 +89,21 @@ def adsl_reboot():
 def check_loop():
     site_list = get_xml_data();
     flag = False
-    for name , info in site_list.items():
+    for name,info in site_list.items():
         sql = info[1]
         value = info[0]
         ans = sql_handler(sql)
-        logger.info("the site : "+name+" stop for: "+str(ans[0]))
+        logger.info("the site : "+name+" stop for: "+str(ans[0])+" and its limit is: "+str(value))
         if ans > value:
             flag = True
 
+    if flag:
+        adsl_reboot()
 
-def timer():
+def timer(n):
     while True:
         check_loop()
-        time.sleep()
+        time.sleep(n)
 
 if __name__ == '__main__':
-    #xml_to_string()
-
-    check_loop()
-    close()
+    timer(24*60*60)
