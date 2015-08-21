@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sites>
+    <site>
+        <tablename>51cto_blog</tablename>
+        <value>24</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `51cto_blog_html_detail`;</sql>
+    </site>
+     <site>
+        <tablename>oschina_question</tablename>
+        <value>24</value>
+         <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `oschina_question_html_detail`;</sql>
+    </site>
+    <site>
+        <tablename>iteye_blog</tablename>
+        <value>24</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `iteye_blog_html_detail`;</sql>
+    </site>
+    <site>
+        <tablename>cnblog_news</tablename>
+        <value>24</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `cnblogs_news_html_detail`;</sql>
+    </site>
+
+
+    <site>
+        <tablename>csdn_blogs</tablename>
+        <value>24</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `stackoverflow_html_detail`;</sql>
+    </site>
+    <site>
+        <tablename>stackoverflow_q</tablename>
+        <value>2</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `stackoverflow_html_detail`;</sql>
+    </site>
+    <site>
+        <tablename>cnblog_question</tablename>
+        <value>24</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `stackoverflow_html_detail`;</sql>
+    </site>
+    <site>
+        <tablename>dewen_question</tablename>
+        <value>24</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `stackoverflow_html_detail`;</sql>
+    </site>
+    <site>
+        <tablename>iteye_ask</tablename>
+        <value>24</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `iteye_ask_html_detail`;</sql>
+    </site>
+    <site>
+        <tablename>csdn_ask</tablename>
+        <value>24</value>
+        <sql>SELECT TIMESTAMPDIFF(HOUR,MAX(crawledTime),NOW()) FROM `stackoverflow_html_detail`;</sql>
+    </site>
+</sites>
